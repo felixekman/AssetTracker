@@ -66,7 +66,7 @@ void AssetTracker::gpsOn(){
     // Power to the GPS is controlled by a FET connected to D6
     pinMode(D6,OUTPUT);
     digitalWrite(D6,LOW);
-    gps.begin(9600);
+    gps.begin(57600);
     gps.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
     delay(500);
     // Default is 1 Hz update rate
